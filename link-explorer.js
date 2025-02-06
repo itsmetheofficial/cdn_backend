@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (paragraphs.length >= 1) {
         // Choose the second-last <p> tag if available, otherwise use the last one
-        let targetParagraph = paragraphs.length > 1 ? paragraphs[paragraphs.length - 2] : paragraphs[paragraphs.length - 1];
+        let targetParagraph = paragraphs.length > 1 ? paragraphs[paragraphs.length - 3] : paragraphs[paragraphs.length - 2];
 
         // Loop through the linksData array and create links
         linksData.forEach((linkData) => {
