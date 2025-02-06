@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     link.style.textDecoration = "none"; // Remove underline
     link.style.color = "inherit"; // Match text color to surrounding paragraph
     link.style.fontWeight = "normal"; // Normal font style
+    //remove border
+    link.style.border = "none";
 
     let targetParagraph = document.querySelector(".inject-link");
     if (targetParagraph) {
