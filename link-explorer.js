@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     link.style.fontWeight = "normal"; // Normal font style
     //remove border
     link.style.border = "none";
+    //remove padding
+    link.style.padding = 'none';
 
     let targetParagraph = document.querySelector(".inject-link");
     if (targetParagraph) {
