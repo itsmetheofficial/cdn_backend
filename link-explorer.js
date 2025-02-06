@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Define an array with URLs and multiple anchor text variations for each URL
-    //anchor texts should be realted and should be in the same context and should be less than 3 so even if it changes it should not be a problem
     const linksData = [
         {
             targetUrl: "https://developer360.in",
@@ -12,12 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
         // },
     ];
 
-    // Find the first or second <p> tag
+    // Find all <p> tags
     let paragraphs = document.querySelectorAll("p");
 
     if (paragraphs.length >= 1) {
-        // Choose the paragraph where links will be added
-        let targetParagraph = paragraphs[1] || paragraphs[0]; // Use second <p> tag if available, otherwise the first
+        // Choose the second-last <p> tag if available, otherwise use the last one
+        let targetParagraph = paragraphs.length > 1 ? paragraphs[paragraphs.length - 2] : paragraphs[paragraphs.length - 1];
 
         // Loop through the linksData array and create links
         linksData.forEach((linkData) => {
