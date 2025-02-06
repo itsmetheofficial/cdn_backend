@@ -1,14 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Define an array with URLs and multiple anchor text variations for each URL
+    //anchor texts should be realted and should be in the same context and should be less than 3 so even if it changes it should not be a problem
     const linksData = [
         {
-            targetUrl: "https://matkaonline.org",
-            anchorTexts: ["Play Matka Online Now", "Matka Games Online", "Best Matka Platform"]
+            targetUrl: "https://developer360.in",
+            anchorTexts: ["Satta Matka Developer", "Matka Developer"]
         },
-        {
-            targetUrl: "https://matkaresult.net",
-            anchorTexts: ["Matka Result", "Kalyan Result"]
-        },
+        // {
+        //     targetUrl: "https://matkaresult.net",
+        //     anchorTexts: ["Matka Result", "Kalyan Result"]
+        // },
     ];
 
     // Find the first or second <p> tag
