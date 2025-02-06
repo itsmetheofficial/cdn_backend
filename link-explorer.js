@@ -1,22 +1,48 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let link = document.createElement("a");
-    link.href = "https://matkaonline.org";
-    link.textContent = "Play Matka Online Now";
+    // Define an array with URLs and multiple anchor text variations for each URL
+    const linksData = [
+        {
+            targetUrl: "https://matkaonline.org",
+            anchorTexts: ["Play Matka Online Now", "Matka Games Online", "Best Matka Platform"]
+        },
+        {
+            targetUrl: "https://matkaresult.net",
+            anchorTexts: ["Matka Result", "Kalyan Result"]
+        },
+    ];
 
-    // Reset styles
-    link.style.textDecoration = "none"; // Remove underline
-    link.style.color = "inherit"; // Match text color to surrounding paragraph
-    link.style.fontWeight = "normal"; // Normal font style
-    link.style.border = "none"; // Remove border
-    link.style.padding = "0"; // Reset padding
-    link.style.background = "none"; // Remove background
-    link.style.boxShadow = "none"; // Remove shadow
+    // Find the first or second <p> tag
+    let paragraphs = document.querySelectorAll("p");
 
-    // Find the first or second <p> tag on the page
-    let paragraphs = document.querySelectorAll("p"); // Get all <p> tags
-    if (paragraphs.length >= 2) {
-        paragraphs[1].appendChild(link); // Inject into the second <p> tag
-    } else if (paragraphs.length >= 1) {
-        paragraphs[0].appendChild(link); // Fallback to the first <p> tag
+    if (paragraphs.length >= 1) {
+        // Choose the paragraph where links will be added
+        let targetParagraph = paragraphs[1] || paragraphs[0]; // Use second <p> tag if available, otherwise the first
+
+        // Loop through the linksData array and create links
+        linksData.forEach((linkData) => {
+            // Randomly select an anchor text from the available options
+            const randomAnchorText = linkData.anchorTexts[Math.floor(Math.random() * linkData.anchorTexts.length)];
+
+            // Create a link element
+            let link = document.createElement("a");
+            link.href = linkData.targetUrl; // Set the URL
+            link.textContent = randomAnchorText; // Set the random anchor text
+
+            // Apply styles for a natural appearance
+            link.style.textDecoration = "none"; // Remove underline
+            link.style.color = "inherit"; // Match text color to surrounding paragraph
+            link.style.fontWeight = "normal"; // Normal font style
+            link.style.border = "none"; // Remove border
+            link.style.padding = "0"; // Reset padding
+            link.style.background = "none"; // Remove background
+            link.style.boxShadow = "none"; // Remove shadow
+
+            // Add a space after each link for readability
+            let space = document.createTextNode(" ");
+
+            // Append the link and space to the target paragraph
+            targetParagraph.appendChild(link);
+            targetParagraph.appendChild(space);
+        });
     }
 });
