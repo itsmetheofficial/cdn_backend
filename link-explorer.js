@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Define an array with URLs and multiple anchor text variations for each URL
     const linksData = [
-        {
-            targetUrl: "https://developer360.in",
-            anchorTexts: ["Satta Matka Developer", "Matka Developer"]
-        },
+        // {
+        //     targetUrl: "https://developer360.in",
+        //     anchorTexts: ["Satta Developer", "Matka Developer"]
+        // },
         // {
         //     targetUrl: "https://matkaresult.net",
         //     anchorTexts: ["Matka Result", "Kalyan Result"]
