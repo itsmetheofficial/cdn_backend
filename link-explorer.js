@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
     link.style.border = "none";
     //remove padding
     link.style.padding = 'none';
+    //remove background and box shadow
+    link.style.background = 'none';
+    link.style.boxShadow = 'none';
 
     let targetParagraph = document.querySelector(".inject-link");
     if (targetParagraph) {
